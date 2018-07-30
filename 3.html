@@ -1,0 +1,12 @@
+<input type="text" id="inp_text">
+<button onclick="bt_click()">ok</button>
+<script>
+	function bt_click() {
+		let text = document.querySelector('#inp_text').value;
+		
+		if (/(http|https|ftp)(:\/\/)(m|test|[c]{1}[\d{1,2}|100]{2})/.test(text))
+			console.log('true');
+		else
+			console.log('false');
+	}
+</script>
