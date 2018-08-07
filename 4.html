@@ -1,0 +1,26 @@
+<script>
+class BaseClass {
+  set a(z) {
+    this.x = -z;
+  }
+  get a(){
+    return this.x;
+  }
+  set b(z) {
+    this.y = -z;
+  }
+  get b(){
+    return this.y;
+  }
+}
+class MyClass extends BaseClass {
+    result(a, b) {
+        this.a = a;
+        this.b = b;
+        return 100 - this.a + this.b;
+    }
+}
+let m = new MyClass();
+m.result(10, 20) === 90;
+m.result(20, 10) === 110;
+</script>
